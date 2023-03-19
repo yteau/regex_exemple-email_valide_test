@@ -1,0 +1,19 @@
+^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
+
+Cette regex utilise des groupes de capture pour séparer l'adresse email en trois parties distinctes : le nom d'utilisateur, le nom de domaine et l'extension de domaine.
+
+Voici comment la regex fonctionne :
+
+^ indique le début de la chaîne.
+
+([a-zA-Z0-9_\-\.]+) correspond à une ou plusieurs lettres, chiffres, traits de soulignement, tirets et points pour le nom d'utilisateur.
+
+@ correspond simplement au symbole @.
+
+([a-zA-Z0-9_\-\.]+) correspond à une ou plusieurs lettres, chiffres, traits de soulignement, tirets et points pour le nom de domaine.
+
+\.([a-zA-Z]{2,5}) correspond à un point suivi d'une extension de domaine valide de 2 à 5 caractères alphabétiques. Cette partie utilise également un groupe de capture pour récupérer l'extension de domaine.
+
+$ indique la fin de la chaîne.
+
+Ainsi, cette regex permet de valider une adresse email de la forme nom_utilisateur@nom_de_domaine.extension_de_domaine. Notez que cette regex n'est pas exhaustive et qu'il existe de nombreuses autres formes valides pour les adresses email.
